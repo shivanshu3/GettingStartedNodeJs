@@ -1,0 +1,4 @@
+You can delete the "node_modules" directory.
+Run "npm install" and that will download all the required packages in the
+"node_modules" directory.
+The "node_modules" directory should ideally be added in the .gitignore file.
