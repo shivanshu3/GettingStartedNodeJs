@@ -5,8 +5,9 @@
   "main": "example.js",
   "dependencies": {
     "body-parser": "^1.10.1",
-    "multer": "^0.1.6",
-    "express": "^4.10.7"
+    "cookie-parser": "^1.4.3",
+    "express": "^4.10.7",
+    "multer": "^0.1.6"
   },
   "devDependencies": {},
   "scripts": {

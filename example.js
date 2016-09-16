@@ -2,6 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var multer = require('multer');
+var cookieParser = require('cookie-parser');
 
 var app = express();
 
@@ -12,6 +13,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // for parsing multipart/form-data
 app.use(multer());
+// for parsing cookies:
+app.use(cookieParser());
 
 //Enable cross origin requests:
 app.use(function(req, res, next) {
@@ -37,6 +40,12 @@ app.get('/getexample', function(req, res) {
 app.post('/postexample', function (req, res) {
    res.send(req.body);
    console.log('Post Example Served');
+});
+
+//GET cookie example
+app.get('/cookies', function(req, res) {
+   res.send(req.cookies);
+   console.log('Cookies Example Served');
 });
 
 app.listen(3000);
