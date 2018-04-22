@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var app = express();
 
 // for parsing multipart/form-data
-var multerUpload = multer({storage: multer.memoryStorage(), files: 1, fileSize: 16*1024*1024});
+var multerUpload = multer({storage: multer.memoryStorage(), limits: {files: 1, fileSize: 16*1024*1024}});
 
 /** Request Parsing Middleware: **/
 // for parsing application/json
