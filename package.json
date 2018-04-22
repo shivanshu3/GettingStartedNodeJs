@@ -1,26 +1,26 @@
 {
-  "name": "gettingstartednodejs",
-  "version": "1.0.0",
-  "description": "Getting Started With Node.js",
-  "main": "example.js",
-  "dependencies": {
-    "body-parser": "^1.10.1",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.10.7",
-    "multer": "^0.1.6"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shivanshu3/GettingStartedNodeJs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shivanshu3/GettingStartedNodeJs/issues"
-  },
-  "homepage": "https://github.com/shivanshu3/GettingStartedNodeJs#readme"
+    "name": "gettingstartednodejs",
+    "version": "1.0.0",
+    "description": "Getting Started With Node.js",
+    "main": "example.js",
+    "dependencies": {
+        "body-parser": "^1.10.1",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.10.7",
+        "multer": "^0.1.6"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shivanshu3/GettingStartedNodeJs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/shivanshu3/GettingStartedNodeJs/issues"
+    },
+    "homepage": "https://github.com/shivanshu3/GettingStartedNodeJs#readme"
 }

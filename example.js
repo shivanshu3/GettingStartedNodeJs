@@ -18,34 +18,34 @@ app.use(cookieParser());
 
 // Enable cross origin requests:
 app.use(function(req, res, next) {
-   res.header("Access-Control-Allow-Origin", "*");
-   res.header("Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept");
-   next();
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept");
+    next();
 });
 
 // GET Params example:
 app.get('/paramsexample/:name', function(req, res) {
-   res.send(req.params);
-   console.log('Params Example Served');
+    res.send(req.params);
+    console.log('Params Example Served');
 });
 
 // GET query example:
 app.get('/getexample', function(req, res) {
-   res.send(req.query);
-   console.log('Get Example Served');
+    res.send(req.query);
+    console.log('Get Example Served');
 });
 
 // POST query example:
 app.post('/postexample', function (req, res) {
-   res.send(req.body);
-   console.log('Post Example Served');
+    res.send(req.body);
+    console.log('Post Example Served');
 });
 
 // GET cookie example
 app.get('/cookies', function(req, res) {
-   res.send(req.cookies);
-   console.log('Cookies Example Served');
+    res.send(req.cookies);
+    console.log('Cookies Example Served');
 });
 
 app.listen(3000);
