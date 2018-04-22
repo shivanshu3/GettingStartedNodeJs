@@ -6,13 +6,14 @@ var cookieParser = require('cookie-parser');
 
 var app = express();
 
+// for parsing multipart/form-data
+var multerUpload = multer({storage: multer.memoryStorage(), files: 1, fileSize: 16*1024*1024});
+
 /** Request Parsing Middleware: **/
 // for parsing application/json
 app.use(bodyParser.json());
 // for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-// for parsing multipart/form-data
-app.use(multer());
 // for parsing cookies:
 app.use(cookieParser());
 
@@ -46,6 +47,13 @@ app.post('/postexample', function (req, res) {
 app.get('/cookies', function(req, res) {
     res.send(req.cookies);
     console.log('Cookies Example Served');
+});
+
+// POST file upload example
+app.post('/upload', multerUpload.single('file'), function(req, res) {
+    var fileSize = req.file.buffer.length;
+    res.send(fileSize + ' bytes file received.');
+    console.log('Upload Example Served');
 });
 
 app.listen(3000);
