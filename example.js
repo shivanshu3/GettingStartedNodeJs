@@ -50,9 +50,10 @@ app.get('/cookies', function(req, res) {
 });
 
 // POST file upload example
-app.post('/upload', multerUpload.single('file'), function(req, res) {
+app.post('/upload', multerUpload.single('fileProp'), function(req, res) {
     var fileSize = req.file.buffer.length;
-    res.send(fileSize + ' bytes file received.');
+    var mimeType = req.file.mimetype;
+    res.send(fileSize + ' bytes file received of ' + mimeType);
     console.log('Upload Example Served');
 });
 
